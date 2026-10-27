@@ -1,0 +1,142 @@
+:root {
+    --green: #2f7d5b;
+    --green-dark: #246348;
+    --red: #c0392b;
+    --text: #222;
+    --muted: #6b7280;
+    --border: #dfe3e8;
+    --bg: #f4f6f4;
+  }
+  
+  * { box-sizing: border-box; }
+  
+  body {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--bg);
+  }
+  
+  h1 { 
+    margin: 0 0 20px; 
+    font-size: 1.8rem; 
+    color: var(--green); 
+}
+  h2 { 
+    margin: 0 0 4px; 
+    font-size: 1.2rem; 
+}
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  
+  .filters { 
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 16px; 
+}
+  .filters input { 
+    flex: 1; 
+}
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+  textarea { 
+    resize: vertical; 
+}
+  .filters select { 
+    width: auto; 
+}
+  
+  input:focus, select:focus, textarea:focus, button:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 1px;
+  }
+  
+  button {
+    padding: 8px 14px;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: var(--green);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button:hover { 
+    background: var(--green-dark); 
+}
+  
+  #cancel-btn { 
+    color: var(--text); 
+    background: #e5e7eb; 
+}
+  #cancel-btn:hover { 
+    background: #d1d5db; 
+}
+  
+  .recipe {
+    margin-bottom: 12px;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--green);
+    border-radius: 8px;
+  }
+  .recipe h3 { 
+    margin: 0 0 2px; 
+}
+  .meta, .recipe h3 + p { 
+    margin: 0 0 10px;
+    font-size: 0.9rem; 
+    color: var(--muted); 
+}
+  
+  .recipe details { 
+    margin-bottom: 12px; 
+}
+  .recipe summary { 
+    cursor: pointer; 
+    color: var(--green); 
+    font-weight: 600; 
+}
+  .recipe details p { 
+    margin: 8px 0; 
+}
+  .recipe ul { 
+    margin: 0; 
+    padding-left: 20px; 
+}
+  
+  .recipe button { 
+    margin-right: 6px; 
+    padding: 6px 12px;
+     font-size: 0.9rem; 
+    }
+  .recipe button:last-child { 
+    background: var(--red); 
+}
+  .recipe button:last-child:hover { 
+    background: #962d22; 
+}
+  
+  @media (max-width: 480px) {
+    .filters { flex-direction: column; }
+    .filters select { width: 100%; }
+  }
